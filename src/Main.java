@@ -27,5 +27,14 @@ public class Main {
             System.out.println("FAILURE: did not find substring or incorrect index.");
         }
 
+
+        // toLowerCase
+        System.out.println(" * toLowerCase:");
+        if( original.toLowerCase().equals("my favorite color is blue.")) {
+            System.out.println("SUCCESS: converted string to all lower case");
+        } else {
+            System.out.println("FAILURE: string did not come back lower case");
+        }
+
     }
 }
