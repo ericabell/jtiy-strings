@@ -1,3 +1,5 @@
+import org.apache.commons.lang3.StringUtils;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -45,5 +47,19 @@ public class Main {
 
         System.out.println("Multiple line string:\n" + multipleLineString);
 
+
+        // EPIC using StringUtils (loaded commons library per misc insructions)
+        if(StringUtils.isBlank(null)) {
+            System.out.println("SUCCESS: using StringUtils isBlank method");
+        } else {
+            System.out.println("FAILURE: isBlank should be true for null");
+        }
+
+        // equalsIgnoreCase
+        if(StringUtils.equalsIgnoreCase("abc", "ABC") == true) {
+            System.out.println("SUCCESS: the two strings are equal, ignoring case");
+        } else {
+            System.out.println("FAILURE: the two strings should have been equal, ignoring case");
+        }
     }
 }
