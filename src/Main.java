@@ -78,5 +78,11 @@ public class Main {
         } else {
             System.out.println("FAILURE: did not pad bat correctly");
         }
+
+        if( leftPad("cat", 6, "e").equals("eeecat")) {
+            System.out.println("SUCCESS: padded cat with leading e");
+        } else {
+            System.out.println("FAILURE: did not pad cat correctly");
+        }
     }
 }
