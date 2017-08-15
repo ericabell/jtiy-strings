@@ -18,6 +18,14 @@ public class Main {
             System.out.println("SUCCESS: should not find a char that is not in original");
         }
 
-        
+
+        // lastIndexOf
+        System.out.println(" * lastIndexOf:");
+        if( original.lastIndexOf("b") == 21) {
+            System.out.println("SUCCESS: located last instance of b in the string.");
+        } else {
+            System.out.println("FAILURE: did not find substring or incorrect index.");
+        }
+
     }
 }
