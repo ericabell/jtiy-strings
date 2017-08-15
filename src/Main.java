@@ -1,5 +1,9 @@
 import org.apache.commons.lang3.StringUtils;
 
+import static org.apache.commons.lang3.StringUtils.equalsIgnoreCase;
+import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.apache.commons.lang3.StringUtils.leftPad;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -49,17 +53,30 @@ public class Main {
 
 
         // EPIC using StringUtils (loaded commons library per misc insructions)
-        if(StringUtils.isBlank(null)) {
+        if(isBlank(null)) {
             System.out.println("SUCCESS: using StringUtils isBlank method");
         } else {
             System.out.println("FAILURE: isBlank should be true for null");
         }
 
         // equalsIgnoreCase
-        if(StringUtils.equalsIgnoreCase("abc", "ABC") == true) {
+        if(equalsIgnoreCase("abc", "ABC") == true) {
             System.out.println("SUCCESS: the two strings are equal, ignoring case");
         } else {
             System.out.println("FAILURE: the two strings should have been equal, ignoring case");
+        }
+
+        // leftPad
+        if( leftPad(null, 3) == null){
+            System.out.println("SUCCESS: null string padded is still null");
+        } else {
+            System.out.println("FAILURE: null string padded should have been null");
+        }
+
+        if( leftPad("bat", 5).equals("  bat")) {
+            System.out.println("SUCCESS: padded bat correctly with two leading spaces");
+        } else {
+            System.out.println("FAILURE: did not pad bat correctly");
         }
     }
 }
