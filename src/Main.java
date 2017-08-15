@@ -36,5 +36,14 @@ public class Main {
             System.out.println("FAILURE: string did not come back lower case");
         }
 
+
+        // ADVENTURE
+        // to get a string literal that spans multiple lines
+        String multipleLineString = "This is the first line\n" +
+                "This is the second line\n" +
+                "This is the third line\n";
+
+        System.out.println("Multiple line string:\n" + multipleLineString);
+
     }
 }
